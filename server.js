@@ -13,6 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files from the "public" folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Route to serve index.html when the root is accessed
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  });
+
 // MySQL connection
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
