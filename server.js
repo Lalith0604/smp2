@@ -19,8 +19,12 @@ app.get('/', (req, res) => {
   });
 
 // MySQL connection
+
+const connectionString = process.env.DATABASE_URL; // Use DATABASE_URL or your variable name
+
+
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOST || '127.0.0.1',
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
