@@ -3,8 +3,10 @@ const mysql = require('mysql');
 const path = require('path');
 require('dotenv').config();
 
+const { Client } = require('pg');
+
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5432;
 
 // Middleware for JSON and form data
 app.use(express.json());
@@ -24,7 +26,8 @@ const connectionString = process.env.DATABASE_URL; // Use DATABASE_URL or your v
 
 
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || '127.0.0.1',
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT || 5432,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
