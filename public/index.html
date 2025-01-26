@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claws & Happiness World</title>
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="static/clawslogo.jpg" alt="Claws & Happiness World Logo">
+            </div>
+            <ul id="menuList">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Claws & Happiness World</h1>
+                <p>Your trusted veterinary clinic for all your pet care needs.</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>A dog's owner knows their pet's personality, and to avoid a tragedy, children must learn to ask permission before petting an unfamiliar dog—no matter how cute and cuddly. A dog's owner knows their pet's personality, and to avoid a tragedy, children must learn to ask permission before petting an unfamiliar dog—no matter how cute and cuddly.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="static/img4.jpg" alt="Happy pets">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="doctor" class="doctor">
+            <div class="container">
+                <div class="doctor-info">
+                    <img src="static/doctorpic.png" alt="Dr. M S Krishnakanth">
+                    <div class="doctor-text">
+                        <h2>Dr. M S Krishnakanth</h2>
+                        <p>Dr. M S Krishnakanth is a Veterinary Physician in Banjara Hills, Hyderabad and has an experience of 21 years in this field. Dr. M S Krishnakanth practices at Claws & Paws in Banjara Hills, Hyderabad and Claws and Paws Pet Clinic in Madhapur, Hyderabad. He completed Bachelor in Veterinary Science and Animal Husbandary (BVSc & AH) from College of Veterinary Science, Rajendranagar, SVVU in 2004. He is a member of FSPAI and Pet Practitioners Association of Twin Cities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <img src="static/dog.jpg" alt="Dog care">
+                        <h3>Dog Care</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="static/bird.jpg" alt="Bird care">
+                        <h3>Bird Care</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="static/dolpin.jpg" alt="Fish care">
+                        <h3>Fish Care</h3>
+                    </div>
+                    <div class="service-item">
+                        <img src="static/cat.jpg" alt="Cat care">
+                        <h3>Cat Care</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="appointment" class="appointment">
+            <div class="container">
+                <h2>Submit Your Details</h2>
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="formMessage"></div>
+            </div>
+        </section>
+
+        
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">How much does the fee cost?</button>
+                        <div class="faq-answer">
+                            <p>The cost of our clinic is lower compared to others.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What are your working hours?</button>
+                        <div class="faq-answer">
+                            <p>We are open from 8:00 AM to 8:00 PM every day except Sundays.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you offer emergency services?</button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer 24/7 emergency services for urgent pet care needs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What types of animals do you treat?</button>
+                        <div class="faq-answer">
+                            <p>We treat a wide range of animals including dogs, cats, birds, and small exotic pets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>We provide both services:</p>
+                    <ul>
+                        <li>Health checkups</li>
+                        <li>Grooming</li>
+                    </ul>
+                    <a href="Admin.html">Admin page</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: <a href="/cdn-cgi/l/email-protection#6f060109002f0c030e181c0e010b070e1f1f06010a1c1c410c0002"><span class="__cf_email__" data-cfemail="2f464149406f4c434e585c4e414b474e5f5f46414a5c5c014c4042">[email&#160;protected]</span></a></li>
+                        <li>Phone: +91 7676805023</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Location</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15227.707416705383!2d78.4389101!3d17.4152976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9726411a516d%3A0x4266b8156bcdc6c4!2sClaws%20%26%20Paws%20Pet%20Clinic%20and%20Surgical%20Center!5e0!3m2!1sen!2sin!4v1736932323082!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menuList = document.getElementById("menuList");
+            if (menuList.style.display === "flex") {
+                menuList.style.display = "none";
+            } else {
+                menuList.style.display = "flex";
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
