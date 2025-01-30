@@ -43,7 +43,7 @@ document.getElementById('appointmentForm').addEventListener('submit', async (e) 
 
     try {
         // Updated fetch URL to your Render backend URL
-        const response = await fetch('https://your-backend-service.onrender.com/submit', {
+        const response = await fetch('https://backend-z0g0.onrender.com/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, phone })
