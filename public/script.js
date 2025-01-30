@@ -9,7 +9,6 @@ function toggleMenu() {
     }
 }
 
-
 // FAQ toggle
 const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -28,11 +27,13 @@ document.getElementById('appointmentForm').addEventListener('submit', async (e) 
     const phone = document.getElementById('phone').value.trim();
     const formMessage = document.getElementById('formMessage');
 
+    // Validate name
     if (!/^[a-zA-Z\s]+$/.test(name)) {
         formMessage.textContent = 'Invalid name. Please use letters and spaces only.';
         return;
     }
 
+    // Validate phone number
     if (!/^\d{10}$/.test(phone)) {
         formMessage.textContent = 'Invalid phone number. Must be 10 digits.';
         return;
@@ -41,7 +42,8 @@ document.getElementById('appointmentForm').addEventListener('submit', async (e) 
     formMessage.textContent = 'Submitting...';
 
     try {
-        const response = await fetch('/submit', {
+        // Updated fetch URL to your Render backend URL
+        const response = await fetch('https://your-backend-service.onrender.com/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, phone })
@@ -58,7 +60,6 @@ document.getElementById('appointmentForm').addEventListener('submit', async (e) 
         console.error(error);
     }
 });
-
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
