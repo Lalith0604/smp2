@@ -42,20 +42,21 @@ db.connect((err) => {
 });
 
 // Form submission route
-app.post('/submit', (req, res) => {
-    const { name, phone } = req.body;
 
-    if (!name || !phone) {
-        return res.status(400).send('Name and phone are required.');
+
+app.post('/submit', (req, res) => {
+    const { name, phone, date, time } = req.body;
+
+    if (!name || !phone || !date || !time) {
+        return res.status(400).send('Name, phone, date, and time are required.');
     }
 
-    const query = 'INSERT INTO appointments (name, phone) VALUES (?, ?)';
-    db.query(query, [name, phone], (err) => {
+    const query = 'INSERT INTO appointments (name, phone, date, time) VALUES (?, ?, ?, ?)';
+    db.query(query, [name, phone, date, time], (err) => {
         if (err) return res.status(500).send('Database error.');
         res.status(200).send('Details submitted successfully.');
     });
 });
-
 // Start the server
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
